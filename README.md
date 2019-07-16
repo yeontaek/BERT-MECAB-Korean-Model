@@ -1,13 +1,13 @@
 # BERT with MECAB for Korean text
 
-기존 Sentencepiece로 구축된 [한국어 BERT Model](https://github.com/yeontaek/BERT-Korean-Model)은 한국어 조사가 제대로 분리되지 않는 문제가 있었습니다. 이로 인해 KorQuAD Task에서 EM이 과도하게 떨어지는 문제가 발생하였습니다. 예를 들어 "노아의 방주에서" 라는 토큰은 "노아" + "##의" + "방주"+ "##에서"로 구분되어야 하지만 아래와 같이 " 
+기존 Sentencepiece로 구축된 [한국어 BERT Model](https://github.com/yeontaek/BERT-Korean-Model)은 한국어 조사가 제대로 분리되지 않는 문제가 있었습니다. 이로 인해 KorQuAD Task에서 EM이 과도하게 떨어지는 문제가 발생하였습니다. 예를 들어 "노아의" 라는 토큰은 "노아" + "##의" + "방주"+ "##에서"로 구분되어야 하지만 아래와 같이 
 
-'''
+```
 노아의 방주에서 가장 처음 밖으로 내보낸 동물은?
 
 ['노', '##아의', '방', '##주는', '총', '몇', '##층으로', '되어', '있었', '##는가', '?']
 
-'''
+```
 
 이러한 문제를 해결하고자 본 repository에서는 Mecab tokenizer를 이용해 사전을 구축하는 과정과 성능 결과를 공유합니다. MECAB으로 구축한 사전 파일을 첨부하였으니, 한국어 BERT Model 학습에 도움이 되길 바랍니다. 
 

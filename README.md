@@ -85,4 +85,10 @@ Base Model 기준으로 총 100만 step을 학습을 진행하였고 기존 Sent
 | 100만 | 512 | 87.8% | 59.0% | 00.00% | 00.00% |
 
 
+| First Header  | Second Header | Third Header         |
+| :------------ | :-----------: | -------------------: |
+| First row     | Data          | Very long data entry |
+| Second row    | **Cell**      | *Cell*               |
+| Third row     | Cell that spans across two columns  ||
+
 

@@ -10,7 +10,7 @@
 
 ```
 
-이러한 문제를 해결하고자 본 repository에서는 Mecab tokenizer를 이용해 사전을 구축하여 학습을 진행하였고 성능 결과를 공유합니다. MECAB으로 구축한 사전 파일을 첨부하였으니, 한국어 BERT Model 학습에 도움이 되길 바랍니다. 
+이러한 문제를 해결하고자 본 repository에서는 Mecab tokenizer를 이용해 사전을 구축하여 학습을 진행하였고 성능 결과를 공유합니다. MECAB으로 구축한 사전 파일을 첨부하였으니, 한국어 BERT Model 학습에 도움이 되었으면 합니다.
 
 
 

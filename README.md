@@ -36,26 +36,6 @@ import mecab
 
 Sentencepiece와 다르게 subword로 구분되지 않아 출현 빈도 기준으로 최대 128,000개의 단어로 사전을 구성하였고, BERT에서 필요한 5개의 token([PAD], [UNK], [CLS], [SEP], [MASK])을 추가하여 총 128005개의 단어로 구성했습니다.  
 
-```
-[PAD]
-[UNK]
-[CLS]
-[SEP]
-[MASK]
-##.
-##다
-##는
-##,
-##에
-##을
-##이
-##하
-##의
-##은
-##를
-
-
-```  
 mecab 설치과 관련된 자세한 사항은 [링크](https://bitbucket.org/eunjeon/mecab-ko-dic/src/master/) 확인하시길 바랍니다. 
 
 

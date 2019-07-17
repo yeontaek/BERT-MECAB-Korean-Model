@@ -86,11 +86,3 @@ Base Model 기준으로 총 100만 step을 학습을 진행하였고 기존 Sent
 
 
 
-| Column 1 | Column 2 | Column 3 | Column 4 |
-| -------- | :------: | -------- | -------- |
-| No span  | Span across three columns    |||
-
-
-
-
-

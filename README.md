@@ -15,18 +15,22 @@
 
 # 사전 구축 
 
-한국어 위키데이터 350만 문장을 사용하였고 각 문장의 한 어절씩 <code>mecab.morphs</code>을 수행하였습니다. 또한 BERT wordpiece_tokenizer을 그대로 사용하기 위해서 tokenizer 된 2번째 단어부터는 "##"을 추가하였습니다. 예를 들어,   
+한국어 위키데이터 350만 문장을 사용하였고 각 문장의 한 어절씩 <code>mecab.morphs</code>을 수행하였습니다. 또한 <code>wordpiece_tokenizer</code>을 그대로 사용하기 위해서 tokenizer 된 2번째 단어부터는 "##"을 추가하였습니다. 예를 들어,   
 
 ```python
-    import mecab
-    count = 0
-    for token in mecab.morphs(sen):
-        tk = token
-         if count > 0:
-            tk = "##" + tk        
-          else:
-            dict[tk] = 1
-            count += 1  
+import mecab
+    mecab = mecab.MeCab()
+    sentence = "노아의 방주에서 가장 처음 밖으로 내보낸 동물은?"
+    for st in sentence.split(" "):
+        count = 0
+        for token in mecab.morphs(st):
+            tk = token
+            if count > 0:
+                tk = "##" + tk
+                print(tk)
+            else:
+                print(tk)
+                count += 1
 ```
 <br>
 

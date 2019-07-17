@@ -16,7 +16,7 @@
 
 # 사전 구축 
 
-한국어 위키데이터 350만 문장을 사용하였고 각 문장의 한 어절씩 <code>mecab.morphs</code>을 수행하였습니다. 또한 <code>wordpiece_tokenizer</code>을 그대로 사용하기 위해서 tokenizer 된 2번째 토큰부터는 "##"을 추가하였습니다. 예를 들어,   
+한국어 위키데이터 350만 문장을 사용하였고 각 문장의 한 어절씩 <code>mecab.morphs</code>을 수행하였습니다. 또한 <code>wordpiece_tokenizer</code>을 그대로 사용하기 위해서 tokenizer 된 2번째 토큰부터는 "##"을 추가하였습니다.
 
 ```python
 import mecab
@@ -41,7 +41,7 @@ import mecab
 ```
 <br>
 
-Sentencepiece와 다르게 subword로 구분되지 않아 출현 빈도 기준으로 최대 128,000개의 단어로 사전을 구성하였고, BERT에서 필요한 5개의 token([PAD], [UNK], [CLS], [SEP], [MASK])을 추가하여 총 128005개의 단어로 구성했습니다.  
+Sentencepiece와 다르게 subword로 구분되지 않아 tokenizer 후 출현 빈도 기준으로 최대 128,000개의 단어로 사전을 구성하였고, BERT에서 필요한 5개의 token([PAD], [UNK], [CLS], [SEP], [MASK])을 추가하여 총 128,005개의 단어로 구성했습니다.  
 
 mecab 설치과 관련된 자세한 사항은 [링크](https://bitbucket.org/eunjeon/mecab-ko-dic/src/master/) 확인하시길 바랍니다. 
 

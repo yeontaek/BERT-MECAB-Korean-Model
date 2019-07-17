@@ -19,7 +19,7 @@
 한국어 위키데이터 350만 문장을 사용하였고 각 문장의 한 어절씩 <code>mecab.morphs</code>을 수행하였습니다. 또한 <code>wordpiece_tokenizer</code>을 그대로 사용하기 위해서 tokenizer 된 2번째 토큰부터는 "##"을 추가하였습니다.
 
 ```python
-import mecab
+    import mecab
     mecab = mecab.MeCab()
     morph = []
     sentence = "담수와 염수가 급작스럽게 섞일 경우 대부분의 수생생물이 폐사하는 원인은?"

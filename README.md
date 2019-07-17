@@ -76,19 +76,10 @@ Base Model 기준으로 총 100만 step을 학습을 진행하였고 기존 Sent
 
 * Base Model(12-layer, 768-hidden, 12-heads)<br>
 
-| Step | seq_length | Sentencepiece | | Mecab F1 | Mecab EM |
+| Step | seq_length | Sentencepiece F1 | Sentencepiece EM | Mecab F1 | Mecab EM |
 |:-------:|:-------:|:-------:| :-------:| :-------:| :-------:|
-| Step | seq_length |  F1 | EM | Mecab F1 | Mecab EM |
 | 40만 | 128 | 73.98% | 44.49% | 77.41% | 62.12% |
 | 60만 | 128 | 77.15% | 46.89% | 78.63% | 63.17% |
 | 90만 | 128| 78.64% | 48.33% | 00.00% | 00.00% |
 | 100만 | 512 | 87.8% | 59.0% | 00.00% | 00.00% |
-
-
-| First Header  | Second Header | Third Header         |
-| :------------ | :-----------: | -------------------: |
-| First row     | Data          | Very long data entry |
-| Second row    | **Cell**      | *Cell*               |
-| Third row     | Cell that spans across two columns  ||
-
 

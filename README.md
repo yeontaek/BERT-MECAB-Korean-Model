@@ -86,7 +86,9 @@ Base Model 기준으로 총 100만 step을 학습을 진행하였고 기존 Sent
 
 
 
-## 성능 평가  
+## 최종 성능 평가 
+성능 비교를 위해 BERT-Multilingual Model과 실험을 진행하였으며, 하이퍼파라미터는 기본값으로 사용하였습니다. KorQuAD 성능 결과는 아래와 같습니다.
+
 | Model | F1 | EM |
 |:---:|:---:| :---:|
 | BERT-Base, Multilingual Cased | 89.9% | 70.29% |

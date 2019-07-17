@@ -13,7 +13,7 @@
 이러한 문제를 해결하고자 본 repository에서는 Mecab tokenizer를 이용해 사전을 구축하여 학습을 진행하였고 성능 결과를 공유합니다. MECAB으로 구축한 사전 파일을 첨부하였으니, 한국어 BERT Model 학습에 도움이 되었으면 합니다.
 
 
-
+<br>
 # 사전 구축 
 
 한국어 위키데이터 350만 문장을 사용하였고 각 문장의 한 어절씩 <code>mecab.morphs</code>을 수행하였습니다. 또한 <code>wordpiece_tokenizer</code>을 그대로 사용하기 위해서 tokenizer 된 2번째 토큰부터는 "##"을 추가하였습니다.
@@ -45,7 +45,7 @@ Sentencepiece와 다르게 subword로 구분되지 않아 tokenizer 후 출현 �
 
 mecab 설치와 관련된 자세한 사항은 [링크](https://bitbucket.org/eunjeon/mecab-ko-dic/src/master/) 확인하시길 바랍니다. 
 
-
+<br>
 ## BERT Pre-training
 **한국어 위키데이터(2019.01 dump file, 약 350만 문장)** 을 사용하여 학습을 진행하였으며, 모델의 하이퍼파라미터는 논문과 동일하게 사용하였습니다. 오리지널 논문과 동일하게 구축하고자 n-gram masking은 적용하지 않았습니다. 학습 방법은 논문에 서술된 것처럼 128 length 90%, 512 length 10%씩 학습을 진행하여, 총 100만 step을 진행했습니다. 
 <br>
@@ -69,7 +69,7 @@ masked_lm_prob = 0.15
 max_predictions_per_seq = 77
 num_train_steps = 100000
 ```   
-
+<br>
 ## Step별 성능 비교
 Base Model 기준으로 총 100만 step을 학습을 진행하였고 기존 Sentencepiece로 구축한 Model과 성능 비교 결과는 아래와 같습니다. 측정 기준은 step별 KorQuAD Task의 F1,EM으로 측정하였습니다. 
 <br>
@@ -85,7 +85,7 @@ Base Model 기준으로 총 100만 step을 학습을 진행하였고 기존 Sent
 
 
 
-
+<br>
 ## 성능 평가 
 성능 비교를 위해 BERT-Multilingual Model과 실험을 진행하였으며, [Google BERT github](https://github.com/google-research/bert)의 SQUAD Task 기본 하이퍼파라미터를 사용하였습니다. KorQuAD 성능 결과는 아래와 같습니다.
 

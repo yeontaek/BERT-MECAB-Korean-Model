@@ -76,8 +76,8 @@ Base Model 기준으로 총 100만 step을 학습을 진행하였고 기존 Sent
 
 * Base Model(12-layer, 768-hidden, 12-heads)<br>
 
-| Step | seq_length | Sentencepiece F1 ||| Mecab F1 | Mecab EM |
-|:-------:|:-------:|:-------:| :-------:| :-------:|
+| Step | seq_length | Sentencepiece || Mecab F1 | Mecab EM |
+|:-------:|:-------:|:-------:| :-------:| :-------:| :-------:|
 | Step | seq_length |  F1 | EM | Mecab F1 | Mecab EM |
 | 40만 | 128 | 73.98% | 44.49% | 77.41% | 62.12% |
 | 60만 | 128 | 77.15% | 46.89% | 78.63% | 63.17% |

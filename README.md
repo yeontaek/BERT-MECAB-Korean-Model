@@ -83,3 +83,14 @@ Base Model 기준으로 총 100만 step을 학습을 진행하였고 기존 Sent
 | 90만 | 128| 78.64% | 48.33% | 00.00% | 00.00% |
 | 100만 | 512 | 87.8% | 59.0% | 00.00% | 00.00% |
 
+
+
+
+## 성능 평가  
+| Model | F1 | EM |
+|:---:|:---:| :---:|
+| BERT-Base, Multilingual Cased | 89.9% | 70.29% |
+| **BERT with SentencePiece(our model)** | 87.8% | 59.09% |
+| **BERT with Mecab(our model)** | 00% | 00% |
+
+

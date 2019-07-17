@@ -1,6 +1,6 @@
 # BERT with MECAB for Korean text
 
-기존 Sentencepiece로 구축된 [한국어 BERT Model](https://github.com/yeontaek/BERT-Korean-Model)은 한국어 조사가 제대로 분리되지 않는 문제가 있었습니다. 이로 인해 KorQuAD Task에서는 EM이 과도하게 떨어지는 문제가 발생하였습니다. 예를 들어 <code>"담수와"</code> 라는 토큰은 <code>"담수" + "##와"</code>로 구분되어야 하지만 아래와 같이 <code>"담" + "##수와"</code>로 구분되어 사전이 구축되어 학습하였습니다.
+기존 Sentencepiece로 구축된 [한국어 BERT Model](https://github.com/yeontaek/BERT-Korean-Model)은 한국어 조사가 제대로 분리되지 않는 문제가 있었습니다. 이로 인해 KorQuAD Task에서는 EM이 과도하게 떨어지는 문제가 발생하였습니다. 예를 들어 <code>"담수와"</code> 라는 토큰은 <code>"담수" + "##와"</code>로 구분되어야 하지만 아래와 같이 <code>"담" + "##수와"</code>로 구분되어 학습하였습니다.
 
 ```
 담수와 염수가 급작스럽게 섞일 경우 대부분의 수생생물이 폐사하는 원인은?

@@ -15,35 +15,54 @@
 
 # 사전 구축 
 
-한국어 위키데이터 350만 문장을 사용하였고 각 문장의 한 어절씩 <code>mecab.morphs</code>을 수행하였습니다. 
-
-Sentencepiece와 다르게 subword로 구분되지 않아 출현 빈도 기준으로 최대 128,000개의 단어로 사전을 구성하였고, BERT에서 필요한 5개의 token([PAD], [PAD], [PAD], [PAD], [PAD])을 추가하여 총 128005개의 단어로 구성했습니다.  
+한국어 위키데이터 350만 문장을 사용하였고 각 문장의 한 어절씩 <code>mecab.morphs</code>을 수행하였습니다. 또한 BERT wordpiece_tokenizer을 그대로 사용하기 위해서 tokenizer 된 2번째   
 
 ```python
     import mecab
-    from tqdm import tqdm
-    mecab = mecab.MeCab()
+    count = 0
+    for token in mecab.morphs(sen):
+        tk = token
+         if count > 0:
+            tk = "##" + tk        
+          else:
+            dict[tk] = 1
+            count += 1  
+```
 
-    RAW_DATA_FPATH = "../corpus_data/ko-wiki_20190604.txt"
-    with open(RAW_DATA_FPATH, 'r', encoding='utf-8') as f:
-        sentence = f.readlines()
+Sentencepiece와 다르게 subword로 구분되지 않아 출현 빈도 기준으로 최대 128,000개의 단어로 사전을 구성하였고, BERT에서 필요한 5개의 token([PAD], [UNK], [CLS], [SEP], [MASK])을 추가하여 총 128005개의 단어로 구성했습니다.  
 
-    dict = {}
-    for st in tqdm(sentence):
-        if st != "\n":
-            for sen in st.split(" "):
-                count = 0
-                for token in mecab.morphs(sen):
-                    tk = token
-                    if count > 0:
-                        tk = "##" + tk
-                    if tk in dict:
-                        value = dict.get(tk)
-                        dict[tk] = value + 1
-                        count += 1
-                    else:
-                        dict[tk] = 1
-                        count += 1
+```
+[PAD]
+[UNK]
+[CLS]
+[SEP]
+[MASK]
+##.
+##다
+##는
+##,
+##에
+##을
+##이
+##하
+##의
+##은
+##를
+##)
+##고
+##년
+##(
+##에서
+##으로
+있
+##가
+##었
+##로
+##한
+##되
+##과
+##들
+
 
 ```  
 mecab 설치과 관련된 자세한 사항은 [링크](https://bitbucket.org/eunjeon/mecab-ko-dic/src/master/) 확인하시길 바랍니다. 

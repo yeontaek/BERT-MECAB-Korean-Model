@@ -87,7 +87,7 @@ Base Model 기준으로 총 100만 step을 학습을 진행하였고 기존 Sent
 
 
 ## 성능 평가 
-성능 비교를 위해 BERT-Multilingual Model과 실험을 진행하였으며, [Google BERT github](https://github.com/google-research/bert) SQUAD Task 기본 하이퍼파라미터를 사용하였습니다. KorQuAD 성능 결과는 아래와 같습니다.
+성능 비교를 위해 BERT-Multilingual Model과 실험을 진행하였으며, [Google BERT github](https://github.com/google-research/bert)의 SQUAD Task 기본 하이퍼파라미터를 사용하였습니다. KorQuAD 성능 결과는 아래와 같습니다.
 
 | Model | F1 | EM |
 |:---:|:---:| :---:|

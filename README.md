@@ -14,8 +14,13 @@
 
 
 # 사전 구축 
+[^1]mecab 설치과 관련된 자세한 사항은 [링크](https://bitbucket.org/eunjeon/mecab-ko-dic/src/master/) 확인하시길 바랍니다. 
 
 
+
+```python
+
+```  
 
 
 

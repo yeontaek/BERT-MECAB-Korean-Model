@@ -77,7 +77,7 @@ num_train_steps = 100000
 
 
 ## Step별 성능 비교
-Base Model 기준으로 총 100만 step을 학습을 진행하였고 기존 Sentencepiece로 구축한 Model과 성능 비교 결과는 아래와 같습니다. 측정 기준은 step별 KorQuAD Task의 F1,EM으로 측정하였습니다. 
+Base Model 기준으로 총 100만 step을 학습을 진행하였고 기존 Sentencepiece로 구축한 Model과 성능 비교 결과는 아래와 같습니다. 측정 기준은 step별 KorQuAD Task의 F1,EM으로 측정하였습니다.
 <br>
 
 * Base Model(12-layer, 768-hidden, 12-heads)<br>
